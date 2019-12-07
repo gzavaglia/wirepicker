@@ -32,7 +32,7 @@ class Api::V1::WiresController < ApplicationController
     private
 
     def wire_params
-        params.require(:wire).permit(:amps, :volts, :sizing, :conduit)
+        params.require(:wire).permit(:amps, :volts, :sizing, :conduit, :phase)
     end
 
 
