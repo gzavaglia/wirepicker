@@ -2,7 +2,7 @@ class Wires{
     constructor(){
         this.wires = []
         this.adapter = new WiresAdapter()
-        this.bindEventListeners()
+        //this.bindEventListeners()
         this.fetchAndLoadWires()
     }
 
