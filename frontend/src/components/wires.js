@@ -7,8 +7,19 @@ class Wires{
     }
 
     fetchAndLoadWires(){
-        this.adapter.getWires().then(wires => {
-            console.log(wires)
+        this.adapter
+            .getWires()
+            .then(wires => {
+                return console.log(wires)
         })
+        .then( () => {
+            this.render()
+        })
+    }
+
+    render(){
+        //console.log('rendering.....')
+        const wiresContainer = document.getElementById('wires-container')
+        wiresContainer.innerHTML = 'them wires dawg'
     }
 }
