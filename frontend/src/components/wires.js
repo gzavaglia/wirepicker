@@ -10,7 +10,8 @@ class Wires{
         this.adapter
             .getWires()
             .then(wires => {
-                return console.log(wires)
+                //return console.log(wires)
+                wires.forEach(wire => this.wires.push(wire))
         })
         .then( () => {
             this.render()
@@ -21,5 +22,6 @@ class Wires{
         //console.log('rendering.....')
         const wiresContainer = document.getElementById('wires-container')
         wiresContainer.innerHTML = 'them wires dawg'
+        console.log('my wires dawng', this.wires)
     }
 }
